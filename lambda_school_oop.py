@@ -16,7 +16,7 @@ class Employee:
     def __init__(self, name, salary, department=None):
         self.name = name
         self.salary = salary
-        self.department = None
+        self.department = department
     def income_tax(self):
         if self.salary <= 9700:
             return self.salary*(0.10)
@@ -29,7 +29,7 @@ class Employee:
     def __str__(self):
         return "{ name: " + self.name + ", " + "salary: " + str(self.salary) + ", " + "department: " + str(self.department) + " }"
 
-me = Employee("Kwabena", 50000)
+me = Employee("Kwabena", 50000, "Product Management")
 print(me)
 print(me.name)
 print(me.salary)
@@ -39,6 +39,8 @@ print(me.salary)
 ## EXAMPLE: Dog class
 #################
 class Dog:
+
+    taxonomy = "canine"
 
     def __init__(self, name, breed):
         self.name = name
